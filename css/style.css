@@ -1,0 +1,81 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: sans-serif;
+}
+.container{
+    width:25%;
+    margin: auto;
+    margin-top: 50px;
+}
+button{
+    width:10px;
+    height:10px;
+    border-radius: 50%;
+    margin: 12px 12px 0 0;
+    border: none;
+    padding: 10px;
+    display: inline-block;
+    cursor: pointer;
+}
+.detail{
+    padding: 12px 16px 24px;
+    background-color: #2ab32abf;
+}
+.col{
+    padding:32px 20px;
+    background-color: #ffe4c4c7;
+    color: #fff;
+}
+.img-card{
+    box-shadow:0px 0px 25px -10px rgba(0, 0, 0, 0.5);
+}
+img{
+    vertical-align: middle;
+}
+.card{
+    box-shadow: rgba(0, 0, 0, 0.5) -20px 30px 25px -10px;
+}
+h3{
+    margin: 20px 0 8px 0;
+}
+i{
+    color:#000;
+    margin: 0 2px 0 0;
+    font-size: 12px;
+}
+p{
+    font-size: 14px;
+    line-height: 1.5;
+}
+.bi-star-fill{
+    color: yellow;
+}
+.span1{
+    font-weight: bolder;
+    display: inline-block;
+    position: relative;
+    top: 5px;
+    margin: 0 8px;
+}
+.span2{
+    text-decoration: line-through;
+    position: relative;
+    top: 5px;
+    font-size: small;
+}
+.addCart{
+    width: 120px;
+    height: auto;
+    border-radius: 4px;
+    font-size: 12px;
+    color: #fff;
+    background-color: #000;
+}
+.bi-cart-fill{
+    color: #fff;
+    margin: 0 4px 0 0;
+}
