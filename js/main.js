@@ -3,7 +3,12 @@ let cars=[{
     name:"Rolls-Royce Phantom VIII",
     image1:"images/RRoyce-gr.webp",
     image2:"images/RRoyce-br.webp",
-    image3:"images/RRoyce-vio.webp"
+    image3:"images/RRoyce-vio.webp",
+    mileage:"Mileage: 4000 miles",
+    fuel:"Fuel: 25mpg",
+    safety_rating:5,
+    price:"$140,500",
+    offerPrice:"$134,450"
 }];
 let cont=document.querySelector(".container");
 
@@ -43,8 +48,6 @@ cars.forEach(e=>{
     title.style.borderRadius="4px";
 
 
-
-
     detail.appendChild(title);
 
     let cName=document.createElement("h3");
@@ -52,20 +55,20 @@ cars.forEach(e=>{
     detail.appendChild(cName);
 
     let para=document.createElement("p");
-    para.innerHTML=`<i class="bi bi-car-front-fill"></i>`+"Mileage: 4000 miles";
+    para.innerHTML=`<i class="bi bi-car-front-fill"></i>`+e.mileage;
     detail.appendChild(para);
 
     let para1=document.createElement("p");
-    para1.innerHTML=`<i class="bi bi-fuel-pump-fill"></i>`+"Fuel: 25mpg";
+    para1.innerHTML=`<i class="bi bi-fuel-pump-fill"></i>`+e.fuel;
     detail.appendChild(para1);
 
     let para2=document.createElement("p");
-    para2.innerHTML=`<i class="bi bi-shield-fill"></i>`+"Safety:"+
-    `<i class="bi bi-star-fill"></i>
-    <i class="bi bi-star-fill"></i>
-    <i class="bi bi-star-fill"></i>
-    <i class="bi bi-star-fill"></i>
-    <i class="bi bi-star-fill"></i>`;
+    para2.innerHTML=`<i class="bi bi-shield-fill"></i>`+"Safety:";
+    for(i=0;i<e.safety_rating;i++){
+        let starIcon=document.createElement("i");
+        starIcon.classList.add("bi-star-fill");
+        para2.appendChild(starIcon);
+    };
     detail.appendChild(para2);
 
     let para3=document.createElement("p");
@@ -103,12 +106,12 @@ cars.forEach(e=>{
     let span1=document.createElement("span");
     detail.appendChild(span1);
     span1.classList.add("span1");
-    span1.innerHTML="$134,450";
+    span1.innerHTML=e.offerPrice;
 
     let span2=document.createElement("span");
     detail.appendChild(span2);
     span2.classList.add("span2");
-    span2.innerHTML="$140,500";
+    span2.innerHTML=e.price;
 
     let addCart=document.createElement("div");
     detail.appendChild(addCart);
